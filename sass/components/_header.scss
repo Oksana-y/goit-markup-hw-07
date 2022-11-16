@@ -1,108 +1,18 @@
-/*Header*/
 .header {
-  border-bottom: 2px solid var(--borde-line-color);
+    border-bottom: 1px solid var(--borde-line-color);
 }
 
-&__container {
+.header__container {
   display: flex;
   align-items: center;
-  /* border-bottom: 2px solid var(--borde-line-color); */
+  
 }
 
-
-&__logo {
+.header__logo {
   padding: 25px 93px 25px 0;
 }
 
-&__logo span {
+.header__logo span {
   color: #000000;
 }
 
-/* Site-nav */
-.site-nav__list {
-  display: flex;
-  justify-content: center;
-}
-
-/* Підкреслення сторінки при наведенні */
-.site-nav__link {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding-top: 32px;
-  padding-bottom: 31px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-}
-
-.site-nav__link::after {
-  content: "";
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  left: 0;
-  bottom: -1px;
-  width: 0%;
-  height: 4px;
-  background-color: #2196f3;
-  border-radius: 2px;
-  transition: width var(--easy-go);
-}
-
-.site-nav__link--current:visited:after {
-  background-color: var(--accent-text-color);
-}
-
-.site-nav__link:hover:after,
-.site-nav__link:focus:after,
-.site-nav__link--current:after {
-  width: 100%;
-}
-
-.contact__link {
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
-  transition: color var(--easy-go);
-}
-
-.site-nav__item:not(:last-child),
-.contact__item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.site-nav__link:hover,
-.site-nav__link:focus,
-.contact__link:hover,
-.contact__link:focus {
-  color: var(--accent-text-color);
-}
-
-/*  Перехід на сторінки сайту з формою для листування та з'єднання скайпом*/
-.contact {
-  display: flex;
-  margin-left: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact__icon {
-  margin: 0;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  fill: currentColor;
-  transition: color var(--easy-go);
-}
-
-.contact__icon:hover,
-.contact__icon:focus {
-  fill: var(--accent-text-color);
-}

@@ -55,7 +55,7 @@ p {
 /*Header*/
 .header {
   /* background-color: var(--main-background-color); */
-  border-bottom: 2px solid var(--borde-line-color);
+  border-bottom: 1px solid var(--borde-line-color);
 }
 
 .header__container {
@@ -124,7 +124,7 @@ p {
 
 .site-nav__link:hover:after,
 .site-nav__link:focus:after,
-.site-nav__link--current:after {
+.site-nav__link.current:after {
   width: 100%;
 }
 
@@ -175,11 +175,10 @@ p {
 
 /* Банер */
 .section-banner {
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto;
   padding: 200px 0px;
   max-width: 1600px;
-  height: 600px;
+  /* height: 600px; */
   align-content: center;
   background-color: var(--dark-background-color);
   background-position: center;
@@ -221,8 +220,18 @@ p {
 /* Секція переваг */
 
 /* Ховаємо заголовок */
-.advantage__block-title {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Для зоголовків одного типу сторінки */
@@ -240,7 +249,6 @@ p {
 .advantage-list {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 94px;
 }
 
 .advantage-list__item {
@@ -282,16 +290,17 @@ p {
 }
 /* Стилізуємо фото процесу роботи */
 .workspace {
+  padding-top: 0;
+}
+.workspace__list {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
-
 .workspace__item {
   display: block;
   position: relative;
-  margin-right: 30px;
-}
-
+ }
 .workspace__text {
   position: absolute;
   display: inline-block;
@@ -309,10 +318,6 @@ p {
   color: var(--white-text-color);
   background-color: rgba(47, 48, 58, 0.8);
   ;
-}
-
-.workspace__item:last-child {
-  margin-right: 0;
 }
 
 
@@ -336,9 +341,14 @@ p {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
+.wrap {
+  margin: auto;
+  padding: 30px 32px;
+}
 .section-team__name {
   margin-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -346,29 +356,31 @@ p {
   letter-spacing: 0.03em;
 }
 
-.section-team__text {
+.section-team__position {
   margin-top: 0;
-  margin-bottom: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 16px;
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
 
-.section-team__photo{
+/* .section-team__photo{
   margin-bottom: 30px;
-}
+} */
 
 /* <!-- Посилання на соціальні мережи --> */
 .social {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 32px;
+  /* margin-right: 32px;
   margin-bottom: 30px;
   margin-left: 32px;
   width: 206px;
-  height: 44px;
+  height: 44px; */
   gap: 10px;
 }
 
@@ -474,7 +486,7 @@ p {
   fill: var(--accent-text-color);
   cursor: pointer;
 }
-.modal__text {
+.modal__title {
 font-weight: 700;
 font-size: 20px;
 margin-bottom: 12px;
@@ -543,11 +555,13 @@ textarea:focus {
   fill: var(--accent-text-color);
 }
 .privasy {
+  vertical-align: middle;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
 margin-bottom: 30px;
 color: var(--secondary-text-color);
+
 }
 .privasy__input {
   display: none;
@@ -598,26 +612,15 @@ color: var(--secondary-text-color);
 
 /* Сторінка Портфоліо */
 /* Ховаємо заголовок */
-.block {
-  display: none;
-}
 
 /* Блок сортувальних кнопок */
-.set-btn {
+.btns-set--filter {
   display: flex;
   justify-content: center;
+  gap: 8px;
   margin-bottom: 50px;
 }
-
-.set-btn__item {
-  margin-right: 8px;
-}
-
-.set-btn__item:last-child {
-  margin-right: 0px;
-}
-
-.set-btn__sort {
+.btns-set__btn {
   padding: 6px 22px;
   border-radius: 4px;
   border-style: none;
@@ -632,8 +635,8 @@ color: var(--secondary-text-color);
   transition: background-color var(--easy-go);
 }
 
-.set-btn__sort:hover,
-.set-btn__sort:focus {
+.btns-set__btn:hover,
+.btns-set__btn:focus {
   color: var(--white-text-color);
   background-color: var(--accent-text-color);
   cursor: pointer;
@@ -677,9 +680,6 @@ color: var(--secondary-text-color);
   background-color: var(--main-background-color);
 }
 
-/* .example-img {
-  display: block;
-} */
 
 .projects__title {
   margin-top: 0;
@@ -792,7 +792,7 @@ color: var(--secondary-text-color);
   margin-left: 70px;
 }
 
-.footer__social-list {
+.footer__social-l {
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -830,20 +830,20 @@ color: var(--secondary-text-color);
 }
 
 /* Форма для підпису на розсилку */
-.footer__box-form {
+.footer__subscribe {
   display: block;
   margin-left: 93px;
   padding-top: 11px;
 }
 
-.form-subscribe {
+.subscribe__form {
   display: flex;
   margin: auto;
   justify-content: space-between;
   align-items: center;
 }
 
-.form-subscribe__input {
+.subscribe__input {
   display: flex;
   width: 358px;
   height: 50px;
@@ -856,7 +856,7 @@ color: var(--secondary-text-color);
   border-radius: 4px;
 
 }
-.form-subscribe__submit-btn {
+.subscribe__submit-btn {
   position: relative;
   display: flex;
   padding: 10px 28px;
@@ -877,7 +877,7 @@ color: var(--secondary-text-color);
   color: var(--white-text-color);
 }
 
-.form-subscribe__icon {
+.subscribe__icon {
   fill: var(--main-background-color);
   margin-left: 10px; 
 }

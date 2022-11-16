@@ -1,0 +1,27 @@
+.btns-set--filter {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+.btns-set__btn {
+  padding: 6px 22px;
+  border-radius: 4px;
+  border-style: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  border: none;
+  color: var(--title-text-color);
+  background-color: var(--secondary-background-color);
+  transition: color var(--easy-go);
+  transition: background-color var(--easy-go);
+}
+
+.btns-set__btn:hover,
+.btns-set__btn:focus {
+  color: var(--white-text-color);
+  background-color: var(--accent-text-color);
+  cursor: pointer;
+}
