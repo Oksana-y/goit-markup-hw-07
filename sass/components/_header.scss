@@ -1,22 +1,20 @@
 /*Header*/
 .header {
-  
   border-bottom: 2px solid var(--borde-line-color);
 }
 
-.header__container {
+&__container {
   display: flex;
   align-items: center;
   /* border-bottom: 2px solid var(--borde-line-color); */
 }
 
-/* Logo */
 
-.header__logo {
+&__logo {
   padding: 25px 93px 25px 0;
 }
 
-.header__logo span {
+&__logo span {
   color: #000000;
 }
 

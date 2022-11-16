@@ -2,13 +2,13 @@
     display: flex;
     justify-content: space-between;
   }
-.workspace__item {
+  &__item {
     display: block;
     position: relative;
     margin-right: 30px;
   }
   
-  .workspace__text {
+  &__text {
     position: absolute;
     display: inline-block;
     z-index: 2;
@@ -27,7 +27,7 @@
     ;
   }
   
-  .workspace__item:last-child {
+  &__item:last-child {
     margin-right: 0;
   }
   
