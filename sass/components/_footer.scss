@@ -5,45 +5,45 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--dark-background-color);
-}
-.footer__box {
+
+&__box {
   display: block;
   width: 231px;
- 
-}
-.container-footer {
-  display: flex;
-  margin-right: auto;
-}
-
-.footer__logo {
-  display: block;
-  margin-bottom: 20px;
-}
-
-.footer__logo span {
-  color: var(--white-text-color);
-}
-
-.footer__box-social {
+ }
+&__box-social {
   display: block;
   padding-top: 11px;
   margin-left: 70px;
 }
+&__subscribe {
+  margin-left: 93px;
+}
+}
+
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+
+& span {
+  color: var(--white-text-color);
+}
+}
+
 
 .footer__social-link {
   fill: var(--white-text-color);
   background: rgba(255, 255, 255, 0.1);
-}
 
-.footer__social-link:hover,
-.footer__social-link:focus {
+&:hover,
+&:focus {
   fill: var(--main-background-color);
   background-color: var(--accent-text-color);
 }
+}
 
-
-.footer__subscribe {
-    margin-left: 93px;
-  }
-
+.container-footer {
+  display: flex;
+  margin-right: auto;
+}
+ 

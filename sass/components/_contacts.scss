@@ -4,6 +4,9 @@
   justify-content: center;
   align-items: center;
 }
+.contact__item:not(:last-child) {
+  margin-right: 50px;
+}
 
 .contact__link {
   display: flex;
@@ -14,10 +17,12 @@
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
   transition: color var(--easy-go);
+
+ &:hover,
+ &:focus {
+  color: var(--accent-text-color);
 }
 
-.contact__item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .contact__icon {
@@ -27,13 +32,10 @@
   margin-right: 10px;
   fill: currentColor;
   transition: color var(--easy-go);
-}
 
-.contact__icon:hover,
-.contact__icon:focus {
+ &:hover,
+ &:focus {
   fill: var(--accent-text-color);
 }
-.contact__link:hover,
-.contact__link:focus {
-  color: var(--accent-text-color);
+
 }

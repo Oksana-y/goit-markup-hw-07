@@ -8,9 +8,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overlay.jpg);
-}
 
-.section-banner__title {
+&__title {
   margin-bottom: 30px;
   color: var(--white-text-color);
   font-weight: 900;
@@ -20,7 +19,7 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.section-banner__button {
+&__button {
   justify-content: center;
   width: 216px;
   padding: 10px 0;
@@ -30,3 +29,4 @@
   line-height: 1.88;
   letter-spacing: 0.06em;
  }
+}
